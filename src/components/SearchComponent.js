@@ -5,9 +5,8 @@ const SearchComponent = ({ handleSearch, SearchedBooks, handleChangeBook, allBoo
   console.log(SearchedBooks)
   const [query, setQuery] = useState("");
   const updateQuery = (query) => {
-    setQuery(query.trim());
-    //const ShowingContacts = query === "" ? contacts : contacts.filter((c) => c.name.toLowerCase().includes(query.toLowerCase()));
-    handleSearch(query)
+    setQuery(query);
+    handleSearch(query.trim())
   }
   const updatedBooks = SearchedBooks.map(book => {
     allBooks.map(b => {
